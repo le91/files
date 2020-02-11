@@ -1,7 +1,7 @@
 # Install tmux 2.8 on Centos 6.10
 
 # install deps
-yum install gcc kernel-devel make ncurses-devel
+yum install -y gcc kernel-devel make ncurses-devel
 
 # DOWNLOAD SOURCES FOR LIBEVENT AND MAKE AND INSTALL
 cd /var/games/

@@ -1,0 +1,38 @@
+.t-Body .t-Body-actions {
+    width: 250px;
+}
+@media only screen and (min-width: 641px) {
+  .t-PageBody.js-rightExpanded.t-PageBody--hideLeft .t-Body-main,
+  .t-PageBody.js-rightExpanded.t-PageBody--hideLeft .t-Body-nav {
+    transform: none;
+  }
+  :not(.u-RTL) .t-PageBody.js-rightExpanded.t-PageBody--hideLeft .t-Body-main {
+    margin-right: 250px;
+  }
+  .u-RTL .t-PageBody.js-rightExpanded.t-PageBody--hideLeft .t-Body-main {
+    margin-left: 250px;
+  }
+  :not(.u-RTL) .t-PageBody.js-rightExpanded.t-PageBody--hideLeft .t-Body-title {
+    right: 250px;
+  }
+  .u-RTL .t-PageBody.js-rightExpanded.t-PageBody--hideLeft .t-Body-title {
+    left: 250px;
+  }
+}
+
+.t-PageBody.js-rightCollapsed .t-Body-main {
+  margin-right: 0px;
+}
+.t-PageBody.js-rightCollapsed .t-Body-title {
+  right: 0px;
+}
+:not(.u-RTL) .t-PageBody.js-rightCollapsed .t-Body-actions {
+  -webkit-transform: translate3d(250px, 0, 0);
+  -ms-transform: translate(250px);
+  transform: translate3d(250px, 0, 0);
+}
+.u-RTL .t-PageBody.js-rightCollapsed .t-Body-actions {
+  -webkit-transform: translate3d(-250px, 0, 0);
+  -ms-transform: translate(-250px);
+  transform: translate3d(-250px, 0, 0);
+}

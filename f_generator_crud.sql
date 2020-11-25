@@ -18,7 +18,7 @@ create or replace function f_generator_crud(
           pipelined
           authid current_user
      as
-          vwt        f_generator_crud_table;
+          table_odj  f_generator_crud_table;
           pragma     autonomous_transaction;
 begin
 
@@ -26,7 +26,7 @@ begin
           'body insert', 'procedure '||lower(p_table)||'_insert ('
           || listagg(lower('p_'||column_name)||' in ' ||lower(data_type), ', ') within group (order by column_id) 
           || ', p_person in varchar2);' 
-          ) bulk collect into vwt
+          ) bulk collect into table_odj
        from all_tab_cols
       where table_name = upper(p_table)
         and column_id > 1
@@ -52,8 +52,8 @@ begin
         and owner = (select sys_context('USERENV','CURRENT_SCHEMA') from dual)
      ;
 
-     for i in 1..vwt.count loop
-          pipe row ( f_generator_crud_type(vwt( i ).plsql_type,vwt( i ).plsql_code) );
+     for i in 1..table_odj.count loop
+          pipe row ( f_generator_crud_type(table_odj( i ).plsql_type,table_odj( i ).plsql_code) );
      end loop;
      
 end f_generator_crud;

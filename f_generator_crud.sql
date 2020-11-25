@@ -6,7 +6,7 @@
   create or replace type f_generator_crud_type as object( plsql_type varchar2(200),plsql_code varchar2(4000)); 
 /
 
-
+-- select * from table(f_generator_crud('TABLE_NAME'));
 
 --------------------------------------------------------
 --  DDL for Function F_GENERATOR_CRUD

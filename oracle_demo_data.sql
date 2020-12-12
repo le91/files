@@ -1,17 +1,17 @@
 --
--- Copyright (c) Oracle Corporation 1988, 1999.  All Rights Reserved.
+-- Copyright (c) Oracle Corporation 1988, 2020.  All Rights Reserved.
 --
 --  NAME
---    demobld.sql
+--    oracle_demo_data.sql
 --
 -- DESCRIPTION
 --   This script creates the SQL*Plus demonstration tables in the
 --   current schema.  It should be STARTed by each user wishing to
---   access the tables.  To remove the tables use the demodrop.sql
+--   access the tables.  To remove the tables use the oracle_demo_data.sql
 --   script.
 --
 --  USAGE
---       SQL> START demobld.sql
+--       SQL> START oracle_demo_data.sql
 --
 --
 
